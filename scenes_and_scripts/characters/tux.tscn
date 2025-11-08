@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpigj34uvtspg"]
+
+[ext_resource type="SpriteFrames" uid="uid://ce0l6nnkl1fft" path="res://assets/spriteframes/tux.tres" id="1_8ctss"]
+[ext_resource type="Script" uid="uid://diahktuf4kkqe" path="res://scenes_and_scripts/characters/tux.gd" id="1_d87wj"]
+[ext_resource type="AudioStream" uid="uid://boa2ewuigvejb" path="res://assets/sounds/jump.wav" id="3_ixj52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d87wj"]
+size = Vector2(24, 32)
+
+[node name="Tux" type="CharacterBody2D"]
+z_index = 50
+collision_layer = 2
+collision_mask = 45
+floor_max_angle = 1.4835298
+floor_snap_length = 45.0
+script = ExtResource("1_d87wj")
+
+[node name="smallTux" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_8ctss")
+animation = &"stand"
+centered = false
+
+[node name="smallTuxCollision" type="CollisionShape2D" parent="."]
+position = Vector2(25, 32)
+shape = SubResource("RectangleShape2D_d87wj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 1
+limit_left = 0
+limit_top = 0
+limit_bottom = 1792
+position_smoothing_speed = 10.0
+drag_vertical_enabled = true
+drag_top_margin = 0.3
+drag_bottom_margin = 0.3
+
+[node name="smalljump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ixj52")

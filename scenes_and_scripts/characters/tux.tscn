@@ -10,17 +10,17 @@ size = Vector2(24, 32)
 [node name="Tux" type="CharacterBody2D"]
 z_index = 50
 collision_layer = 2
-collision_mask = 45
+collision_mask = 109
 floor_max_angle = 1.4835298
 floor_snap_length = 45.0
 script = ExtResource("1_d87wj")
 
-[node name="smallTux" type="AnimatedSprite2D" parent="."]
+[node name="SmallTux" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_8ctss")
 animation = &"stand"
 centered = false
 
-[node name="smallTuxCollision" type="CollisionShape2D" parent="."]
+[node name="SmallTuxCollision" type="CollisionShape2D" parent="."]
 position = Vector2(25, 32)
 shape = SubResource("RectangleShape2D_d87wj")
 
@@ -31,8 +31,8 @@ limit_top = 0
 limit_bottom = 1792
 position_smoothing_speed = 10.0
 drag_vertical_enabled = true
-drag_top_margin = 0.3
+drag_top_margin = 0.5
 drag_bottom_margin = 0.3
 
-[node name="smalljump" type="AudioStreamPlayer2D" parent="."]
+[node name="SmallJump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ixj52")

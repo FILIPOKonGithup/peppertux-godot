@@ -15,6 +15,10 @@ run/main_scene="uid://pn5c8nwsn303"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://scenes_and_scripts/global.gd"
+
 [display]
 
 window/size/viewport_width=800
@@ -56,6 +60,7 @@ player_jump={
 2d_physics/layer_4="Blocks"
 2d_physics/layer_5="Player Projectiles"
 2d_physics/layer_6="Enemy Projectiles"
+2d_physics/layer_7="Coins"
 
 [rendering]
 

@@ -10,7 +10,7 @@ extends CharacterBody2D
 
 var speed = 320
 var acceleration = 0.1
-var deceleration = 0.075
+var deceleration = 0.08
 var min_jump_height = 512
 var max_jump_height = 576
 var decelerate_on_jump_release = 0.5
@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("player_jump") and is_on_floor() and in_cutscene == false:
-		$smalljump.play()
+		$SmallJump.play()
 		var current_speed = velocity.x
 		if current_speed == 320 or current_speed == -320:
 			velocity.y = -max_jump_height
@@ -51,17 +51,17 @@ func _physics_process(delta: float) -> void:
 
 	# Handle Animations
 	if not is_on_floor():
-		$smallTux.play("jump")
+		$SmallTux.play("jump")
 	elif velocity.x > 0 and not is_on_wall() or velocity.x < 0:
-		$smallTux.play("walk")
+		$SmallTux.play("walk")
 	else:
-		$smallTux.play("stand")
+		$SmallTux.play("stand")
 	
 	if is_on_wall() and is_on_floor():
-		$smallTux.play("stand")
+		$SmallTux.play("stand")
 	
 	if not direction == 0 and in_cutscene == false:
-		$smallTux.flip_h = direction < 0
+		$SmallTux.flip_h = direction < 0
 	
 	# Handle facing_direction changes
 	if direction == -1:

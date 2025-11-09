@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/wisphunt.ogg-0b1fff213dd2d8122c306de22a97874b
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=21.08
+bpm=0.0
 beat_count=0
 bar_beats=4

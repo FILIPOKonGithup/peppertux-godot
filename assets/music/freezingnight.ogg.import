@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/freezingnight.ogg-4b849d58eb552b548227ca96910
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

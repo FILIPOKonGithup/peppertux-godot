@@ -1,6 +1,4 @@
 # PepperTux Godot
-PepperTux, but in Godot!
-
 This is the new version of PepperTux, and the old repository (peppertux-game) will soon be renamed to peppertux-old.
 
 ## Story

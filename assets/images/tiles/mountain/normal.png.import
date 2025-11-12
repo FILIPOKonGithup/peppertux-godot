@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpfxeml78418f"
-path="res://.godot/imported/waves-trans.png-3945738d3cb2ad58930fb0d7b0be7b66.ctex"
+uid="uid://x8mih4bihchj"
+path="res://.godot/imported/normal.png-c951328252830ac01f4c09f12d033f99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/animatedtiles/waves-trans.png"
-dest_files=["res://.godot/imported/waves-trans.png-3945738d3cb2ad58930fb0d7b0be7b66.ctex"]
+source_file="res://assets/images/tiles/mountain/normal.png"
+dest_files=["res://.godot/imported/normal.png-c951328252830ac01f4c09f12d033f99.ctex"]
 
 [params]
 

@@ -16,7 +16,7 @@ Check the AUTHORS file for more information.
 * Vaesea - Coding, Levels, Music
 * Convival - Only stuff for old PepperTux
 * AnatolyStev - Music
-* FilipOK - Art
+* FilipOK - Art, Music (Bonus Cave 2)
 
 ### SuperTux Team
 * Grumbel - Made art for SuperTux (Most, if not all of the art, including unused / scrapped art like the Desert background is used here)
@@ -24,6 +24,7 @@ Check the AUTHORS file for more information.
 * Wansti - Made music for SuperTux (Most, if not all of the music for SuperTux is used here)
 * Jonfx1007 - Improved SuperTux's forest tileset (The slopes from that improvement are used here)
 * Weluvgoatz - Snow fort tiles (used as sand tiles here with the saturation reduced and with it also being recolored)
+* DJ Gentoo - New Salcon
 
 If I didn't mention someone who worked on SuperTux who has stuff they made used here, it was most likely on accident, please tell me if I didn't mention someone!
 
@@ -32,7 +33,4 @@ If I didn't mention someone who worked on SuperTux who has stuff they made used 
 * Remaxim + opengameart.org - Orchestral Remix of Airship Song
 * Lukas Nystrand (Mortimer Twang) - Mortimer's Chipdisko
 * Mystical - Old Salcon
-
-TODO: Find out who made New Salcon
-
 * Larry Ewing - Creator of Tux

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dybnjyyjfollm"
-path="res://.godot/imported/flag.png-01d56c23f2f1836e8773f7518c1fb25b.ctex"
+uid="uid://cvag3nm1g8cp0"
+path="res://.godot/imported/stone.png-081933706640f4ed2f2f82c9bd723da9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/animatedtiles/flag.png"
-dest_files=["res://.godot/imported/flag.png-01d56c23f2f1836e8773f7518c1fb25b.ctex"]
+source_file="res://assets/images/tiles/castle/stone.png"
+dest_files=["res://.godot/imported/stone.png-081933706640f4ed2f2f82c9bd723da9.ctex"]
 
 [params]
 

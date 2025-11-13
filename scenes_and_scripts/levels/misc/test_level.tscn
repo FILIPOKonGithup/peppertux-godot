@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=4 uid="uid://pn5c8nwsn303"]
+[gd_scene load_steps=11 format=4 uid="uid://pn5c8nwsn303"]
 
 [ext_resource type="TileSet" uid="uid://b0fxxapggxmcq" path="res://assets/tilesets/snow.tres" id="1_fbsb8"]
 [ext_resource type="Texture2D" uid="uid://cmm5xoa0jaixr" path="res://assets/images/backgrounds/desertsky.png" id="1_ussqv"]
 [ext_resource type="Texture2D" uid="uid://cguco2gdshufq" path="res://assets/images/backgrounds/forest2.png" id="2_4w3jn"]
 [ext_resource type="PackedScene" uid="uid://dpigj34uvtspg" path="res://scenes_and_scripts/characters/tux.tscn" id="2_g6dnt"]
 [ext_resource type="PackedScene" uid="uid://c216u6q5ttj21" path="res://scenes_and_scripts/objects/bonus_block.tscn" id="4_4w3jn"]
+[ext_resource type="PackedScene" uid="uid://c2eyssig7u0tx" path="res://scenes_and_scripts/characters/snowball.tscn" id="5_i2jp0"]
 [ext_resource type="AudioStream" uid="uid://dks5hcla3gd8k" path="res://assets/music/forest3.ogg" id="6_4w3jn"]
+[ext_resource type="Script" uid="uid://kpypw7usjrxk" path="res://scenes_and_scripts/characters/smartball.gd" id="7_lo08n"]
+[ext_resource type="PackedScene" uid="uid://dy580rnnrnrxa" path="res://scenes_and_scripts/characters/smartball.tscn" id="8_dpcbt"]
+[ext_resource type="PackedScene" uid="uid://br2s8x0obq6xq" path="res://scenes_and_scripts/characters/viciousivy.tscn" id="10_bmrkp"]
 
 [node name="TestLevel" type="Node2D"]
 
@@ -132,12 +136,51 @@ rendering_quadrant_size = 32
 collision_enabled = false
 physics_quadrant_size = 32
 
-[node name="BonusBlock" parent="Tilemaps" instance=ExtResource("4_4w3jn")]
-position = Vector2(256, 1568)
-
 [node name="Tux" parent="." instance=ExtResource("2_g6dnt")]
 position = Vector2(32, 1632)
+
+[node name="BonusBlock" parent="." instance=ExtResource("4_4w3jn")]
+position = Vector2(256, 1568)
+
+[node name="Snowball" parent="." instance=ExtResource("5_i2jp0")]
+position = Vector2(608, 1664)
+script = ExtResource("7_lo08n")
+
+[node name="Snowball2" parent="." instance=ExtResource("5_i2jp0")]
+position = Vector2(1152, 1664)
+script = ExtResource("7_lo08n")
+
+[node name="Snowball3" parent="." instance=ExtResource("5_i2jp0")]
+position = Vector2(1888, 1664)
+script = ExtResource("7_lo08n")
+
+[node name="Snowball4" parent="." instance=ExtResource("5_i2jp0")]
+position = Vector2(2592, 1536)
+script = ExtResource("7_lo08n")
+
+[node name="Snowball5" parent="." instance=ExtResource("5_i2jp0")]
+position = Vector2(3136, 1536)
+script = ExtResource("7_lo08n")
+
+[node name="Snowball6" parent="." instance=ExtResource("5_i2jp0")]
+position = Vector2(3456, 1536)
+script = ExtResource("7_lo08n")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_4w3jn")
 autoplay = true
+
+[node name="Smartball" parent="." instance=ExtResource("8_dpcbt")]
+position = Vector2(832, 1536)
+
+[node name="Smartball2" parent="." instance=ExtResource("8_dpcbt")]
+position = Vector2(2560, 1408)
+
+[node name="ViciousIvy" parent="." instance=ExtResource("10_bmrkp")]
+position = Vector2(4480, 1536)
+
+[node name="ViciousIvy2" parent="." instance=ExtResource("10_bmrkp")]
+position = Vector2(6048, 1632)
+
+[node name="ViciousIvy3" parent="." instance=ExtResource("10_bmrkp")]
+position = Vector2(5824, 1632)

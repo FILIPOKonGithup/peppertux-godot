@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://dy580rnnrnrxa"]
+
+[ext_resource type="Script" uid="uid://kpypw7usjrxk" path="res://scenes_and_scripts/characters/smartball.gd" id="1_vgx7f"]
+[ext_resource type="SpriteFrames" uid="uid://crm7p2d3clxkd" path="res://assets/spriteframes/smartball.tres" id="2_vgx7f"]
+[ext_resource type="AudioStream" uid="uid://jp50qxyns17k" path="res://assets/sounds/squish.wav" id="6_mfxds"]
+[ext_resource type="AudioStream" uid="uid://dwa8onc3iijt5" path="res://assets/sounds/fall.wav" id="7_bohua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xuiww"]
+size = Vector2(27, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lufqx"]
+size = Vector2(27, 31)
+
+[node name="Smartball" type="CharacterBody2D"]
+z_index = 49
+collision_layer = 128
+collision_mask = 9
+floor_max_angle = 1.4835298
+floor_snap_length = 15.0
+script = ExtResource("1_vgx7f")
+
+[node name="Image" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_vgx7f")
+animation = &"walk"
+centered = false
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(18.5, 22.5)
+shape = SubResource("RectangleShape2D_xuiww")
+
+[node name="WallDetection" type="RayCast2D" parent="."]
+position = Vector2(18, 20)
+target_position = Vector2(-15, 0)
+collision_mask = 13
+
+[node name="GroundDetection" type="RayCast2D" parent="."]
+position = Vector2(18, 22)
+target_position = Vector2(0, 17)
+collision_mask = 9
+
+[node name="SquishSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_mfxds")
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(18.5, 22.5)
+shape = SubResource("RectangleShape2D_lufqx")
+
+[node name="FallSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_bohua")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-64, 0)
+rect = Rect2(-32, -96, 224, 224)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

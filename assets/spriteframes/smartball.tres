@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://crm7p2d3clxkd"]
+
+[ext_resource type="Texture2D" uid="uid://kvbeeqnulmch" path="res://assets/images/characters/smartball/mrs-squished-left.png" id="1_q6h5v"]
+[ext_resource type="Texture2D" uid="uid://h607f7ixn22q" path="res://assets/images/characters/smartball/left-0.png" id="2_14v24"]
+[ext_resource type="Texture2D" uid="uid://r4vi28k7be2t" path="res://assets/images/characters/smartball/left-1.png" id="3_chkxb"]
+[ext_resource type="Texture2D" uid="uid://b5nc3tfvcj4l" path="res://assets/images/characters/smartball/left-2.png" id="4_2dvpj"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q6h5v")
+}],
+"loop": true,
+"name": &"squished",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_14v24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_chkxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2dvpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_chkxb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
